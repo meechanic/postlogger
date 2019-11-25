@@ -1,5 +1,8 @@
 import os
-from urllib.parse import parse_qs
+try:
+    from urllib.parse import parse_qs
+except ImportError:
+    from urlparse import parse_qs
 import json
 from datetime import datetime
 import time
